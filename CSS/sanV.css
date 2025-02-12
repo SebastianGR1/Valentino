@@ -1,0 +1,98 @@
+/* Reset básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    overflow: hidden; /* Evita el desplazamiento */
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Fondo degradado bonito */
+}
+
+/* Contenedor principal */
+.contenedor {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo de los GIFs */
+.gif {
+    position: absolute;
+    width: 220px; /* Tamaño fijo para los GIFs */
+    height: 240px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+}
+
+.gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el GIF para cubrir el cuadrado */
+}
+
+/* Posicionamiento de los GIFs en forma de cuadrado */
+.gif-1 { top: 1%; left: 10%; }
+.gif-2 { top: 1%; right: 10%; }
+.gif-3 { bottom: 10%; left: 10%; }
+.gif-4 { bottom: 10%; right: 10%; }
+.gif-5 { top: 4%; left: 44%; }
+
+
+/* Cuadro centrado */
+.cuadro-centrado {
+    margin-top: 220px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+    padding: em;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 500px; /* Ancho máximo del cuadro */
+    max-height: 470px;
+    z-index: 1; /* Coloca el cuadro encima de los GIFs */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para el cuadro */
+}
+
+/* Estilo del título */
+h1 {
+    font-size: 30px; /* Tamaño de fuente grande */
+    margin-bottom: 0.5em;
+    color: #333; /* Color de texto oscuro */
+}
+
+/* Estilo del párrafo */
+p {
+    font-size: 16px;
+    color: #555; /* Color de texto gris */
+}
+
+h2 {
+    color: black;
+}
+
+/* Media queries para ajustes específicos */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px; /* Ajusta el tamaño del título en dispositivos móviles */
+    }
+    p {
+        font-size: 12px; /* Ajusta el tamaño del párrafo en dispositivos móviles */
+    }
+    .gif {
+        width: 60px; /* GIFs más pequeños en móviles */
+        height: 60px;
+    }
+    .cuadro-centrado {
+        margin-top: 10px;
+        background-color: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
+        padding: em;
+        border-radius: 15px;
+        text-align: center;
+        max-width: 350px; /* Ancho máximo del cuadro */
+        max-height: 470px;
+        z-index: 1; /* Coloca el cuadro encima de los GIFs */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para el cuadro */
+    }
+}
